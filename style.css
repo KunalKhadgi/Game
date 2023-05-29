@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.background{
+    position: absolute;
+    margin: .4vh .4vw .4vh .4vw;
+    height:99.2vh;
+    width: 99.2vw;
+}
+
+#gameOver {
+    font-size: 7vw;
+    position: absolute;
+    left: 33.15vw;
+    visibility: hidden;
+}
+
+#score {
+    position: absolute;
+    color: red;
+    font-size: 4vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    right: 10vw;
+    text-align: right;
+    visibility: hidden;
+}
+
+/* mario css and animation */
+
+.mario {
+    position: absolute;
+    bottom: 12vh;
+    left: 7vw;
+    width: 5vw;
+}
+
+.mariojump {
+    animation: jump 1s ease;
+}
+
+@keyframes jump {
+    0% {bottom: 15vh;}
+    10%{rotate: 10deg;}
+    50% {
+        bottom: 25vh;
+        rotate: 0deg;
+    }
+    90% {rotate: -10deg;}
+    100% {
+        bottom: 12vh;
+        rotate: 0deg;
+    }
+}
+
+.marioforeward {
+    animation: foreward 500ms linear;
+}
+
+@keyframes foreward {
+    0%{
+        
+    }
+}
+
+/* obs1 css and animation */
+
+.obs1 {
+    position: absolute;
+    width: 2.5vw;
+    bottom: 12vh;
+    right: 0.4vw;
+    transform: rotateX(180deg);
+    transform: rotateY(180deg);
+    /* animation: obs1animation 3.5s infinite linear; */
+}
+
+.obs1animation{
+    animation: obs1ani 3.5s infinite linear;
+}
+
+@keyframes obs1ani {
+    0% { left: 99.6vw; }
+    100% { left: -5vw; }
+}
+
+/* obs2 css and animation */
+
+.obs2 {
+    position: absolute;
+    width: 2.5vw;
+    bottom: 12vh;
+    right: 0.4vw;
+    /* animation: obs2ani 3.5s infinite; */
+}
+
+.obs2animation {
+    animation: obs2ani 3.5s infinite ease-in;
+}
+
+@keyframes obs2ani {
+    0% {left: 99.6vw;}
+    100% {left: -5vw;}
+}
